@@ -1,5 +1,7 @@
 from pipeline import validate_customer, filter_valid_customers
-
+def test_customer_with_negative_age():
+    customer = {"name": "Rahul", "age": -5}
+    assert validate_customer(customer) is False
 
 def test_valid_customer():
     customer = {"name": "Krish", "age": 21}
